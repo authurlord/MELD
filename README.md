@@ -92,8 +92,8 @@ and change
 peft_model_id = "lora_weight/MoE_CT/add/Mistral/amazon_google-MoE-CT" 
 model = PeftModel.from_pretrained(base_model, model_id=peft_model_id,adapter_name='Mistral|amazon_google-MoE-CT') ## Load Base Model and LoRA#1
 
-model.load_adapter("/data/home/wangys/LLaMA-Factory-main/lora_weight/MoE_CT/add/Mistral/amazon_google-MoE-CT", adapter_name="Mistral|amazon_google-MoE-CT") ## LoRA #1
-model.load_adapter("/data/home/wangys/LLaMA-Factory-main/lora_weight/MoE_CT/add/Mistral/restaurant-MoE-CT", adapter_name="Mistral|restaurant-MoE-CT") ## LoRA #1
+model.load_adapter("lora_weight/MoE_CT/add/Mistral/amazon_google-MoE-CT", adapter_name="Mistral|amazon_google-MoE-CT") ## LoRA #1
+model.load_adapter("lora_weight/MoE_CT/add/Mistral/restaurant-MoE-CT", adapter_name="Mistral|restaurant-MoE-CT") ## LoRA #1
 
 adapter_sequence = ["Mistral|amazon_google-MoE-CT",'Mistral|restaurant-MoE-CT'] ## Here only list 2, you may add more.
 
