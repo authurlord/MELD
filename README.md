@@ -2,7 +2,7 @@
 This repository contains the code for the paper "Efficient Mixture of Experts based on Large Language Models for
 Low-Resource Data Preprocessing"
 
-A full version, containing specific task definition, proof of mentioned theorem, and additional experiment result is in [Full Version](./supplementary/LLM_MOE_DB__KDD_Full_Version_v1.pdf)
+A full version, containing specific task definition, proof of mentioned theorem, and additional experiment result is in [Full Version](./supplementary/MELD_Full_Ver_V2.pdf)
 
 We provide the checkpoint for our method, as well as the training data for these checkpoints. 
 
