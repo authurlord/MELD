@@ -1,0 +1,15 @@
+# 忽略 lora_weight 文件夹下的所有文件
+lora_weight/*
+
+# 不忽略子文件夹的名称
+!lora_weight/*/
+!Unicorn-main/data/*
+!
+# 忽略所有 .bin 文件和 .pt 文件
+*.bin
+*.pt
+*.npy
+*.safetensors
+*.zip
+*.pkl
+
