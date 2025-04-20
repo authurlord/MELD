@@ -2,6 +2,8 @@
 This repository contains the code for the paper "Efficient Mixture of Experts based on Large Language Models for
 Low-Resource Data Preprocessing"
 
+All checkpoint, train/test file and raw dataset for reproduce is uploaded in this [Link](https://drive.google.com/file/d/1cxVeU259hgByx5Rm4ofLPsk-JbH8emW8/view?usp=drive_link). Please also check `README_dataset.md` and `evaluation.ipynb` for detail.
+
 A full version, containing specific task definition, proof of mentioned theorem, and additional experiment result is in [Full Version](./supplementary/MELD_Full_Ver_V2.pdf)
 
 We provide the checkpoint for our method, as well as the training data for these checkpoints. 
