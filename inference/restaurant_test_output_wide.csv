@@ -1,0 +1,668 @@
+,instruction,input,output,predict
+0,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` century city '"", ""` new york city '"", ""` san francisco '"", ""` culver city '"", ""` st. boyle hts . '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'acquarello', 'addr': ""' 1722 sacramento st. '"", 'phone': '415/567 -5432', 'type': 'italian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` palm too \'"", \'addr\': ""\' 840 second ave. \'"", \'phone\': \'212-697-5198\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+{'Entity 1': '{\'name\': \'postrio\', \'addr\': ""\' 545 post st. \'"", \'phone\': \'415-776-7825\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` gramercy tavern \'"", \'addr\': ""\'42 e. 20th st. between park ave. s and broadway \'"", \'phone\': \'212/477 -0777\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` jean lafitte \'"", \'addr\': ""\'68 w. 58th st. \'"", \'phone\': \'212/751 -2323\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` bally \\\\ \'s big kitchen \'"", \'addr\': ""\' 3645 las vegas blvd. s \'"", \'phone\': \'702/739 -4111\', \'type\': \'buffets\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+1,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` manhattan beach '"", ""` new york '"", 'queens', 'brooklyn', ""` new york city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` sparks steak house '"", 'addr': ""' 210 e. 46th st. '"", 'phone': '212-687-4855', 'type': 'steakhouses', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': \'postrio\', \'addr\': ""\' 545 post st. \'"", \'phone\': \'415-776-7825\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` cafe claude \'"", \'addr\': ""\' 7 claude la . \'"", \'phone\': \'415/392 -3505\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` arnie morton \\\\ \'s of chicago \'"", \'addr\': ""\' 435 s. la cienega blvd. \'"", \'phone\': \'310-246-1501\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': ""` koo koo roo \'"", \'addr\': ""\' 8393 w. beverly blvd. \'"", \'phone\': \'213-655-9045\', \'type\': \'chicken\', \'city\': \'\'}', 'output': {'city': 'la'}}
+
+{'Entity 1': '{\'name\': ""` mi cocina \'"", \'addr\': ""\'57 jane st. \'"", \'phone\': \'212-627-8273\', \'type\': \'mexican\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+",,"{""city"": ""` new york city '""}"," {""city"": ""` new york '""}"
+2,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` los angeles '"", ""` las vegas '"", ""` w. hollywood '"", ""` santa monica '"", ""` century city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` bertolini \\ 's '"", 'addr': ""' 3570 las vegas blvd. s '"", 'phone': '702/735 -4663', 'type': 'italian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` dante \\\\ \'s down the hatch \'"", \'addr\': ""` underground underground mall underground atlanta \'"", \'phone\': \'404/577 -1800\', \'type\': \'continental\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` carey \\\\ \'s \'"", \'addr\': ""\' 1021 cobb pkwy . se \'"", \'phone\': \'770-422-8042\', \'type\': \'hamburgers\', \'city\': \'\'}', 'output': {'city': 'marietta'}}
+
+{'Entity 1': '{\'name\': ""` manhattan cafe \'"", \'addr\': ""\' 1161 1st ave. between 63rd and 64th sts . \'"", \'phone\': \'212/888 -6556\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': \'global\', \'addr\': ""\'33 93 2nd ave. between 5th and 6th sts . \'"", \'phone\': \'212/477 -8427\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` cafe flore \'"", \'addr\': ""\' 2298 market st. \'"", \'phone\': \'415-621-8579\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+",,"{""city"": ""` las vegas '""}"," {""city"": ""` las vegas '""}"
+3,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", ""` san francisco '"", ""` studio city '"", ""` century city '"", ""` new york city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` la folie '"", 'addr': ""' 2316 polk st. '"", 'phone': '415-776-5577', 'type': ""` french ( new ) '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` heera of india \'"", \'addr\': ""\' 595 piedmont ave. rio shopping mall \'"", \'phone\': \'404/876 -4408\', \'type\': \'asian\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` lucky strike \'"", \'addr\': ""\'59 grand st. between wooster st. and w. broadway \'"", \'phone\': \'212/941 -0479\', \'type\': ""` or 212/941 -0772 american \'"", \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` original pancake house ( at ) \'"", \'addr\': ""\' 4330 peachtree rd. \'"", \'phone\': \'404-237-4116\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': \'vida\', \'addr\': ""\' 1930 north hillhurst ave. \'"", \'phone\': \'213/660 -4446\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` los feliz '""}}
+
+{'Entity 1': '{\'name\': ""` the heights \'"", \'addr\': ""\' 3235 sacramento st. \'"", \'phone\': \'415/474 -8890\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+4,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` manhattan beach '"", ""` new york city '"", ""` san francisco '"", ""` new york '"", 'brooklyn']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` china grill '"", 'addr': ""'60 w. 53rd st. '"", 'phone': '212/333 -7788', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` ruby \\\\ \'s ( la ) \'"", \'addr\': ""\'45 s. fair oaks ave. \'"", \'phone\': \'818-796-7829\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': 'pasadena'}}
+
+{'Entity 1': '{\'name\': ""` flying biscuit the \'"", \'addr\': ""\' 1655 mclendon ave. \'"", \'phone\': \'404-687-8888\', \'type\': \'eclectic\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` parioli romanissimo \'"", \'addr\': ""\'24 e. 81st st. \'"", \'phone\': \'212/288 -2391\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` chez jacqueline \'"", \'addr\': ""\'72 macdougal st. between w. houston and bleecker sts . \'"", \'phone\': \'212/505 -0727\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` bally \\\\ \'s big kitchen \'"", \'addr\': ""\' 3645 las vegas blvd. s \'"", \'phone\': \'702/739 -4111\', \'type\': \'buffets\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+5,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", ""` studio city '"", ""` century city '"", ""` new york city '"", ""` san francisco '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` hawthorne lane '"", 'addr': ""'22 hawthorne st. '"", 'phone': '415-777-9779', 'type': 'californian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` bally \\\\ \'s big kitchen \'"", \'addr\': ""\' 3645 las vegas blvd. s \'"", \'phone\': \'702/739 -4111\', \'type\': \'buffets\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': ""` fiore rotisserie & grille \'"", \'addr\': ""\' 3700 w. flamingo rd. \'"", \'phone\': \'702-252-7702\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': \'cava\', \'addr\': ""\' 3rd st. \'"", \'phone\': \'213/658 -8898\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': ""` cafe claude \'"", \'addr\': ""\' 7 claude ln . \'"", \'phone\': \'415-392-3505\', \'type\': ""` french bistro \'"", \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` smith & wollensky \'"", \'addr\': ""\' 201 e. 49th st. \'"", \'phone\': \'212/753 -1530\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+6,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` santa monica '"", 'malibu', ""` manhattan beach '"", ""` monterey park '"", ""` seal beach '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` ocean park cafe '"", 'addr': ""' 3117 ocean park blvd. '"", 'phone': '310-452-5728', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` california pizza kitchen \'"", \'addr\': ""\' 207 s. beverly dr. \'"", \'phone\': \'310/275 -1101\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': ""` barney greengrass \'"", \'addr\': ""\' 9570 wilshire blvd. \'"", \'phone\': \'310/777 -5877\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` beverly hills '""}}
+
+{'Entity 1': '{\'name\': ""` manhattan cafe \'"", \'addr\': ""\' 1161 1st ave. between 63rd and 64th sts . \'"", \'phone\': \'212/888 -6556\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` ritz-carlton dining room ( buckhead ) \'"", \'addr\': ""\' 3434 peachtree rd. ne \'"", \'phone\': \'404-237-2700\', \'type\': ""` american ( new ) \'"", \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` cafe claude \'"", \'addr\': ""\' 7 claude la . \'"", \'phone\': \'415/392 -3505\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+",,"{""city"": ""` santa monica '""}"," {""city"": ""` santa monica '""}"
+7,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['brooklyn', ""` san francisco '"", ""` new york city '"", ""` los angeles '"", ""` new york '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` capsouto freres '"", 'addr': ""' 451 washington st. near watts st. '"", 'phone': '212/966 -4900', 'type': 'french', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` rae \\\\ \'s \'"", \'addr\': ""\' 2901 pico blvd. \'"", \'phone\': \'310-828-7937\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': ""` santa monica '""}}
+
+{'Entity 1': '{\'name\': \'bolo\', \'addr\': ""\'23 e. 22nd st. \'"", \'phone\': \'212/228 -2200\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` heera of india \'"", \'addr\': ""\' 595 piedmont ave. rio shopping mall \'"", \'phone\': \'404/876 -4408\', \'type\': \'asian\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` lucky strike \'"", \'addr\': ""\'59 grand st. between wooster st. and w. broadway \'"", \'phone\': \'212/941 -0479\', \'type\': ""` or 212/941 -0772 american \'"", \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` tang pavillion \'"", \'addr\': ""\'65 w. 55th st. \'"", \'phone\': \'212/956 -6888\', \'type\': \'asian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+8,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['brooklyn', ""` new york '"", ""` new york city '"", ""` los angeles '"", ""` manhattan beach '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` sweet \\ ` n \\ ` tart cafe '"", 'addr': ""'76 mott st. at canal st. '"", 'phone': '212/334 -8088', 'type': 'asian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` uncle nick \\\\ \'s \'"", \'addr\': ""\' 747 9th ave. between 50th and 51st sts . \'"", \'phone\': \'212/315 -1726\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': \'vida\', \'addr\': ""\' 1930 north hillhurst ave. \'"", \'phone\': \'213/660 -4446\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` los feliz '""}}
+
+{'Entity 1': '{\'name\': ""` dante \\\\ \'s down the hatch \'"", \'addr\': ""` underground underground mall underground atlanta \'"", \'phone\': \'404/577 -1800\', \'type\': \'continental\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` chez jacqueline \'"", \'addr\': ""\'72 macdougal st. between w. houston and bleecker sts . \'"", \'phone\': \'212/505 -0727\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` california pizza kitchen \'"", \'addr\': ""\' 207 s. beverly dr. \'"", \'phone\': \'310/275 -1101\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+9,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['marietta', 'roswell', 'decatur', ""` college park '"", 'atlanta']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'chopstix', 'addr': ""' 4279 roswell rd. '"", 'phone': '404-255-4868', 'type': 'chinese', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` ritz-carlton dining room ( buckhead ) \'"", \'addr\': ""\' 3434 peachtree rd. ne \'"", \'phone\': \'404-237-2700\', \'type\': ""` american ( new ) \'"", \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` chez jacqueline \'"", \'addr\': ""\'72 macdougal st. between w. houston and bleecker sts . \'"", \'phone\': \'212/505 -0727\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': \'granita\', \'addr\': ""\' 23725 w. malibu rd. \'"", \'phone\': \'310/456 -0488\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': 'malibu'}}
+
+{'Entity 1': '{\'name\': ""` jean lafitte \'"", \'addr\': ""\'68 w. 58th st. \'"", \'phone\': \'212/751 -2323\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` cafe adriano \'"", \'addr\': ""\' 3347 fillmore st. \'"", \'phone\': \'415/474 -4180\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+",,"{""city"": ""atlanta""}"," {""city"": ""atlanta""}"
+10,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['marietta', 'brooklyn', 'atlanta', 'decatur', 'duluth']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` aleck \\ 's barbecue heaven '"", 'addr': ""' 783 martin luther king jr. dr. '"", 'phone': '404/525 -2062', 'type': 'barbecue', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` wollensky \\\\ \'s grill \'"", \'addr\': ""\' 205 e. 49th st. \'"", \'phone\': \'212-753-0444\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+{'Entity 1': '{\'name\': \'zab-e-lee\', \'addr\': ""\' 4837 old national hwy . \'"", \'phone\': \'404-768-2705\', \'type\': \'thai\', \'city\': \'\'}', 'output': {'city': ""` college park '""}}
+
+{'Entity 1': '{\'name\': ""` barney greengrass \'"", \'addr\': ""\' 9570 wilshire blvd. \'"", \'phone\': \'310/777 -5877\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` beverly hills '""}}
+
+{'Entity 1': '{\'name\': ""` ruby \\\\ \'s ( la ) \'"", \'addr\': ""\'45 s. fair oaks ave. \'"", \'phone\': \'818-796-7829\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': 'pasadena'}}
+
+{'Entity 1': '{\'name\': \'granita\', \'addr\': ""\' 23725 w. malibu rd. \'"", \'phone\': \'310/456 -0488\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': 'malibu'}}
+
+",,"{""city"": ""atlanta""}"," {""city"": ""atlanta""}"
+11,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['pasadena', ""` bel air '"", ""` w. hollywood '"", ""` las vegas '"", ""` college park '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` clearwater cafe '"", 'addr': ""' 168 w. colorado blvd. '"", 'phone': '818/356 -0959', 'type': ""` health food '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` cafe lalo \'"", \'addr\': ""\' 201 w. 83rd st. \'"", \'phone\': \'212/496 -6031\', \'type\': ""` coffee bar \'"", \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` flying biscuit the \'"", \'addr\': ""\' 1655 mclendon ave. \'"", \'phone\': \'404-687-8888\', \'type\': \'eclectic\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` the heights \'"", \'addr\': ""\' 3235 sacramento st. \'"", \'phone\': \'415/474 -8890\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': \'granita\', \'addr\': ""\' 23725 w. malibu rd. \'"", \'phone\': \'310/456 -0488\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': 'malibu'}}
+
+{'Entity 1': '{\'name\': ""` california pizza kitchen \'"", \'addr\': ""\' 207 s. beverly dr. \'"", \'phone\': \'310/275 -1101\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+",,"{""city"": ""` los angeles '""}"," {""city"": ""` pasadena '""}"
+12,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['queens', ""` new york '"", ""` manhattan beach '"", ""` new york city '"", 'brooklyn']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""'21 club '"", 'addr': ""'21 w. 52nd st. '"", 'phone': '212-582-7200', 'type': ""` american ( new ) '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` dante \\\\ \'s down the hatch \'"", \'addr\': ""` underground underground mall underground atlanta \'"", \'phone\': \'404/577 -1800\', \'type\': \'continental\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` baja fresh \'"", \'addr\': ""\' 3345 kimber dr. \'"", \'phone\': \'805-498-4049\', \'type\': \'mexican\', \'city\': \'\'}', 'output': {'city': ""` westlake village '""}}
+
+{'Entity 1': '{\'name\': ""` izzy \\\\ \'s steak & chop house \'"", \'addr\': ""\' 3345 steiner st. \'"", \'phone\': \'415/563 -0487\', \'type\': ""` steak houses \'"", \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` seventh regiment mess and bar \'"", \'addr\': ""\' 643 park ave. at 66th st. \'"", \'phone\': \'212/744 -4107\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` original pancake house ( at ) \'"", \'addr\': ""\' 4330 peachtree rd. \'"", \'phone\': \'404-237-4116\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+",,"{""city"": ""` new york city '""}"," {""city"": ""` new york city '""}"
+13,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` san francisco '"", 'brooklyn', ""` manhattan beach '"", ""` new york city '"", ""` new york '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` golden unicorn '"", 'addr': ""'18 e. broadway at catherine st. '"", 'phone': ""' 212 / 941-0911 '"", 'type': 'asian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` rex il ristorante \'"", \'addr\': ""\' 617 s. olive st. \'"", \'phone\': \'213/627 -2300\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': ""` chez jacqueline \'"", \'addr\': ""\'72 macdougal st. between w. houston and bleecker sts . \'"", \'phone\': \'212/505 -0727\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` alley \\\\ \'s end \'"", \'addr\': ""\' 311 w. 17th st. \'"", \'phone\': \'212/627 -8899\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` palm too \'"", \'addr\': ""\' 840 second ave. \'"", \'phone\': \'212-697-5198\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+{'Entity 1': '{\'name\': \'soto\', \'addr\': ""\' 3330 piedmont rd. \'"", \'phone\': \'404-233-2005\', \'type\': \'japanese\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+14,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` century city '"", 'chinatown', ""` san francisco '"", ""` new york city '"", ""` new york '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` cypress club '"", 'addr': ""' 500 jackson st. '"", 'phone': '415/296 -8555', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` mary mac \\\\ \'s tea room \'"", \'addr\': ""\' 224 ponce de leon ave. \'"", \'phone\': \'404/876 -1800\', \'type\': \'southern\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` arnie morton \\\\ \'s of chicago \'"", \'addr\': ""\' 435 s. la cienega blvd. \'"", \'phone\': \'310-246-1501\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': ""` mambo restaurante cubano \'"", \'addr\': ""\' 1402 n. highland ave. \'"", \'phone\': \'404/874 -2626\', \'type\': \'caribbean\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` uncle nick \\\\ \'s \'"", \'addr\': ""\' 747 9th ave. between 50th and 51st sts . \'"", \'phone\': \'212/315 -1726\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': \'palio\', \'addr\': ""\' 151 w. 51st . st. \'"", \'phone\': \'212/245 -4850\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+15,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` st. boyle hts . '"", ""` san francisco '"", ""` new york '"", ""` new york city '"", ""` century city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` kuleto \\ 's '"", 'addr': ""' 221 powell st. '"", 'phone': '415/397 -7720', 'type': 'italian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` the heights \'"", \'addr\': ""\' 3235 sacramento st. \'"", \'phone\': \'415/474 -8890\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` trattoria dell \\\\ ` arte \'"", \'addr\': ""\' 900 7th ave. between 56th and 57th sts . \'"", \'phone\': \'212/245 -9800\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` cafe botanica \'"", \'addr\': ""\' 160 central park s \'"", \'phone\': \'212/484 -5120\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` wollensky \\\\ \'s grill \'"", \'addr\': ""\' 205 e. 49th st. \'"", \'phone\': \'212-753-0444\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+{'Entity 1': '{\'name\': ""` cafe claude \'"", \'addr\': ""\' 7 claude la . \'"", \'phone\': \'415/392 -3505\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+16,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` manhattan beach '"", ""` los angeles '"", 'brooklyn', ""` new york '"", ""` new york city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` corrado cafe '"", 'addr': ""' 1013 3rd ave. between 60th and 61st sts . '"", 'phone': '212/753 -5100', 'type': ""` coffee bar '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` smith & wollensky \'"", \'addr\': ""\' 201 e. 49th st. \'"", \'phone\': \'212/753 -1530\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` rae \\\\ \'s \'"", \'addr\': ""\' 2901 pico blvd. \'"", \'phone\': \'310-828-7937\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': ""` santa monica '""}}
+
+{'Entity 1': '{\'name\': ""` mi cocina \'"", \'addr\': ""\'57 jane st. \'"", \'phone\': \'212-627-8273\', \'type\': \'mexican\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+{'Entity 1': '{\'name\': ""` jean lafitte \'"", \'addr\': ""\'68 w. 58th st. \'"", \'phone\': \'212/751 -2323\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` elias corner \'"", \'addr\': ""\' 24-02 31st st. \'"", \'phone\': \'718-932-1510\', \'type\': \'greek\', \'city\': \'\'}', 'output': {'city': 'queens'}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+17,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", ""` manhattan beach '"", ""` san francisco '"", ""` new york city '"", 'brooklyn']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` tribeca grill '"", 'addr': ""' 375 greenwich st. near franklin st. '"", 'phone': '212/941 -3900', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` cafe claude \'"", \'addr\': ""\' 7 claude la . \'"", \'phone\': \'415/392 -3505\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` mary mac \\\\ \'s tea room \'"", \'addr\': ""\' 224 ponce de leon ave. \'"", \'phone\': \'404/876 -1800\', \'type\': \'southern\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` tang pavillion \'"", \'addr\': ""\'65 w. 55th st. \'"", \'phone\': \'212/956 -6888\', \'type\': \'asian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` second street grill \'"", \'addr\': ""\' 200 e. fremont st. \'"", \'phone\': \'702-385-6277\', \'type\': ""` pacific rim \'"", \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': ""` main street \'"", \'addr\': ""\' 446 columbus ave. between 81st and 82nd sts . \'"", \'phone\': \'212/873 -5025\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+18,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", ""` new york city '"", ""` manhattan beach '"", 'brooklyn', ""` san francisco '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'newsbar', 'addr': ""' 2 w. 19th st. '"", 'phone': '212/255 -3996', 'type': ""` coffee bar '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` arnie morton \\\\ \'s of chicago \'"", \'addr\': ""\' 435 s. la cienega blvd. \'"", \'phone\': \'310-246-1501\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': \'cava\', \'addr\': ""\' 3rd st. \'"", \'phone\': \'213/658 -8898\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': \'vida\', \'addr\': ""\' 1930 north hillhurst ave. \'"", \'phone\': \'213/660 -4446\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` los feliz '""}}
+
+{'Entity 1': '{\'name\': ""` bally \\\\ \'s big kitchen \'"", \'addr\': ""\' 3645 las vegas blvd. s \'"", \'phone\': \'702/739 -4111\', \'type\': \'buffets\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': \'postrio\', \'addr\': ""\' 545 post st. \'"", \'phone\': \'415-776-7825\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+19,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` sherman oaks '"", 'chinatown', ""` los angeles '"", 'pasadena', ""` studio city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` yujean kang \\ 's '"", 'addr': ""'67 n. raymond ave. '"", 'phone': '818-585-0855', 'type': 'chinese', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` parioli romanissimo \'"", \'addr\': ""\'24 e. 81st st. \'"", \'phone\': \'212/288 -2391\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` cafe flore \'"", \'addr\': ""\' 2298 market st. \'"", \'phone\': \'415-621-8579\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` ritz-carlton dining room ( buckhead ) \'"", \'addr\': ""\' 3434 peachtree rd. ne \'"", \'phone\': \'404-237-2700\', \'type\': ""` american ( new ) \'"", \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` barney greengrass \'"", \'addr\': ""\' 9570 wilshire blvd. \'"", \'phone\': \'310/777 -5877\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` beverly hills '""}}
+
+{'Entity 1': '{\'name\': ""` manhattan cafe \'"", \'addr\': ""\' 1161 1st ave. between 63rd and 64th sts . \'"", \'phone\': \'212/888 -6556\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""pasadena""}"," {""city"": ""` studio city '""}"
+20,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` san francisco '"", ""` new york '"", ""` new york city '"", 'brooklyn', ""` manhattan beach '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'layla', 'addr': ""' 211 w. broadway at franklin st. '"", 'phone': '212/431 -0700', 'type': ""` middle eastern '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` second street grill \'"", \'addr\': ""\' 200 e. fremont st. \'"", \'phone\': \'702-385-6277\', \'type\': ""` pacific rim \'"", \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': \'posto\', \'addr\': ""\' 14928 ventura blvd. \'"", \'phone\': \'818/784 -4400\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` sherman oaks '""}}
+
+{'Entity 1': '{\'name\': ""` izzy \\\\ \'s steak & chop house \'"", \'addr\': ""\' 3345 steiner st. \'"", \'phone\': \'415/563 -0487\', \'type\': ""` steak houses \'"", \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` parioli romanissimo \'"", \'addr\': ""\'24 e. 81st st. \'"", \'phone\': \'212/288 -2391\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': \'bolo\', \'addr\': ""\'23 e. 22nd st. \'"", \'phone\': \'212/228 -2200\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york '""}"
+21,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` los angeles '"", 'queens', ""` new york '"", ""` santa monica '"", 'brooklyn']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` broadway deli '"", 'addr': ""' 3rd st. promenade '"", 'phone': '310/451 -0616', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` cafe flore \'"", \'addr\': ""\' 2298 market st. \'"", \'phone\': \'415-621-8579\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` alley \\\\ \'s end \'"", \'addr\': ""\' 311 w. 17th st. \'"", \'phone\': \'212/627 -8899\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` main street \'"", \'addr\': ""\' 446 columbus ave. between 81st and 82nd sts . \'"", \'phone\': \'212/873 -5025\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` seventh regiment mess and bar \'"", \'addr\': ""\' 643 park ave. at 66th st. \'"", \'phone\': \'212/744 -4107\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` chez jacqueline \'"", \'addr\': ""\'72 macdougal st. between w. houston and bleecker sts . \'"", \'phone\': \'212/505 -0727\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` santa monica '""}"," {""city"": ""` santa monica '""}"
+22,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: ['northridge', 'roswell', 'atlanta', 'marietta', 'decatur']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` sato sushi and thai '"", 'addr': ""' 6050 peachtree pkwy . norcross '"", 'phone': '770/449 -0033', 'type': 'asian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` cafe flore \'"", \'addr\': ""\' 2298 market st. \'"", \'phone\': \'415-621-8579\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': \'campanile\', \'addr\': ""\' 624 s. la brea ave. \'"", \'phone\': \'213/938 -1447\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': \'aquavit\', \'addr\': ""\'13 w. 54th st. \'"", \'phone\': \'212/307 -7311\', \'type\': \'continental\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` ruby \\\\ \'s ( la ) \'"", \'addr\': ""\'45 s. fair oaks ave. \'"", \'phone\': \'818-796-7829\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': 'pasadena'}}
+
+{'Entity 1': '{\'name\': ""` heera of india \'"", \'addr\': ""\' 595 piedmont ave. rio shopping mall \'"", \'phone\': \'404/876 -4408\', \'type\': \'asian\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+",,"{""city"": ""atlanta""}"," {""city"": ""atlanta""}"
+23,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` san francisco '"", ""` century city '"", ""` los angeles '"", ""` new york city '"", ""` new york '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` ritz-carlton restaurant and dining room '"", 'addr': ""' 600 stockton st. '"", 'phone': '415/296 -7465', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': \'palio\', \'addr\': ""\' 151 w. 51st . st. \'"", \'phone\': \'212/245 -4850\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` bally \\\\ \'s big kitchen \'"", \'addr\': ""\' 3645 las vegas blvd. s \'"", \'phone\': \'702/739 -4111\', \'type\': \'buffets\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': ""` mambo restaurante cubano \'"", \'addr\': ""\' 1402 n. highland ave. \'"", \'phone\': \'404/874 -2626\', \'type\': \'caribbean\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` barney greengrass \'"", \'addr\': ""\' 9570 wilshire blvd. \'"", \'phone\': \'310/777 -5877\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` beverly hills '""}}
+
+{'Entity 1': '{\'name\': \'posto\', \'addr\': ""\' 14928 ventura blvd. \'"", \'phone\': \'818/784 -4400\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` sherman oaks '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+24,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", ""` new york city '"", 'chinatown', ""` san francisco '"", ""` century city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'greens', 'addr': ""` bldg. a fort mason '"", 'phone': '415/771 -6222', 'type': 'vegetarian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` buckhead diner \'"", \'addr\': ""\' 3073 piedmont road \'"", \'phone\': \'404/262 -3336\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` cafe claude \'"", \'addr\': ""\' 7 claude la . \'"", \'phone\': \'415/392 -3505\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` original pancake house ( at ) \'"", \'addr\': ""\' 4330 peachtree rd. \'"", \'phone\': \'404-237-4116\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': \'marichu\', \'addr\': ""\' 342 e. 46th st. between 1st and 2nd aves . \'"", \'phone\': \'212/370 -1866\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` arnie morton \\\\ \'s of chicago \'"", \'addr\': ""\' 435 s. la cienega blvd. \'"", \'phone\': \'310-246-1501\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+",,"{""city"": ""` san francisco '""}"," {""city"": ""` san francisco '""}"
+25,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` los angeles '"", ""` college park '"", ""` beverly hills '"", 'decatur', 'pasadena']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` la grotta at ravinia dunwoody rd. '"", 'addr': ""` holiday inn/crowne plaza at ravinia dunwoody '"", 'phone': '770/395 -9925', 'type': 'italian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` baja fresh \'"", \'addr\': ""\' 3345 kimber dr. \'"", \'phone\': \'805-498-4049\', \'type\': \'mexican\', \'city\': \'\'}', 'output': {'city': ""` westlake village '""}}
+
+{'Entity 1': '{\'name\': ""` smith & wollensky \'"", \'addr\': ""\' 201 e. 49th st. \'"", \'phone\': \'212/753 -1530\', \'type\': \'american\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` ruby \\\\ \'s ( la ) \'"", \'addr\': ""\'45 s. fair oaks ave. \'"", \'phone\': \'818-796-7829\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': 'pasadena'}}
+
+{'Entity 1': '{\'name\': ""` kyo-ya . sheraton palace hotel \'"", \'addr\': ""\' 2 new montgomery st. at market st. \'"", \'phone\': \'415/546 -5000\', \'type\': \'asian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` uncle nick \\\\ \'s \'"", \'addr\': ""\' 747 9th ave. between 50th and 51st sts . \'"", \'phone\': \'212/315 -1726\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""atlanta""}"," {""city"": ""` atlanta '""}"
+26,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", ""` new york city '"", ""` manhattan beach '"", 'queens', 'brooklyn']
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'veselka', 'addr': ""' 144 second ave. '"", 'phone': '212-228-9682', 'type': 'ukrainian', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` mary mac \\\\ \'s tea room \'"", \'addr\': ""\' 224 ponce de leon ave. \'"", \'phone\': \'404/876 -1800\', \'type\': \'southern\', \'city\': \'\'}', 'output': {'city': 'atlanta'}}
+
+{'Entity 1': '{\'name\': ""` arnie morton \\\\ \'s of chicago \'"", \'addr\': ""\' 435 s. la cienega blvd. \'"", \'phone\': \'310-246-1501\', \'type\': \'steakhouses\', \'city\': \'\'}', 'output': {'city': ""` los angeles '""}}
+
+{'Entity 1': '{\'name\': ""` cafe flore \'"", \'addr\': ""\' 2298 market st. \'"", \'phone\': \'415-621-8579\', \'type\': \'californian\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` uncle nick \\\\ \'s \'"", \'addr\': ""\' 747 9th ave. between 50th and 51st sts . \'"", \'phone\': \'212/315 -1726\', \'type\': \'mediterranean\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` chez jacqueline \'"", \'addr\': ""\'72 macdougal st. between w. houston and bleecker sts . \'"", \'phone\': \'212/505 -0727\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+",,"{""city"": ""` new york city '""}"," {""city"": ""` new york '""}"
+27,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york city '"", ""` new york '"", 'brooklyn', ""` manhattan beach '"", ""` los angeles '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': ""` boca chica '"", 'addr': ""'13 1st ave. near 1st st. '"", 'phone': '212/473 -0108', 'type': ""` latin american '"", 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` fiore rotisserie & grille \'"", \'addr\': ""\' 3700 w. flamingo rd. \'"", \'phone\': \'702-252-7702\', \'type\': \'italian\', \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': ""` rae \\\\ \'s \'"", \'addr\': ""\' 2901 pico blvd. \'"", \'phone\': \'310-828-7937\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': ""` santa monica '""}}
+
+{'Entity 1': '{\'name\': ""` mi cocina \'"", \'addr\': ""\'57 jane st. \'"", \'phone\': \'212-627-8273\', \'type\': \'mexican\', \'city\': \'\'}', 'output': {'city': ""` new york city '""}}
+
+{'Entity 1': '{\'name\': \'marichu\', \'addr\': ""\' 342 e. 46th st. between 1st and 2nd aves . \'"", \'phone\': \'212/370 -1866\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` ruby \\\\ \'s ( la ) \'"", \'addr\': ""\'45 s. fair oaks ave. \'"", \'phone\': \'818-796-7829\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': 'pasadena'}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york city '""}"
+28,"You are an expert in attribute extraction from Restaurant dataset. Given information from Entity 1, please choose the most proper city from the provided options. 
+
+Return in JSON format.
+
+Options: [""` new york '"", 'brooklyn', 'queens', ""` manhattan beach '"", ""` new york city '""]
+
+Output format example:{""city"": {}}
+
+Entity 1:{'name': 'serendipity', 'addr': ""' 3 225 e. 60th st. '"", 'phone': '212/838 -3531', 'type': 'american', 'city': ''}
+
+Take these examples as reference:
+
+{'Entity 1': '{\'name\': ""` second street grill \'"", \'addr\': ""\' 200 e. fremont st. \'"", \'phone\': \'702-385-6277\', \'type\': ""` pacific rim \'"", \'city\': \'\'}', 'output': {'city': ""` las vegas '""}}
+
+{'Entity 1': '{\'name\': ""` lucky strike \'"", \'addr\': ""\'59 grand st. between wooster st. and w. broadway \'"", \'phone\': \'212/941 -0479\', \'type\': ""` or 212/941 -0772 american \'"", \'city\': \'\'}', 'output': {'city': ""` new york '""}}
+
+{'Entity 1': '{\'name\': ""` koo koo roo \'"", \'addr\': ""\' 8393 w. beverly blvd. \'"", \'phone\': \'213-655-9045\', \'type\': \'chicken\', \'city\': \'\'}', 'output': {'city': 'la'}}
+
+{'Entity 1': '{\'name\': ""` the heights \'"", \'addr\': ""\' 3235 sacramento st. \'"", \'phone\': \'415/474 -8890\', \'type\': \'french\', \'city\': \'\'}', 'output': {'city': ""` san francisco '""}}
+
+{'Entity 1': '{\'name\': ""` ruby \\\\ \'s ( la ) \'"", \'addr\': ""\'45 s. fair oaks ave. \'"", \'phone\': \'818-796-7829\', \'type\': \'diners\', \'city\': \'\'}', 'output': {'city': 'pasadena'}}
+
+",,"{""city"": ""` new york '""}"," {""city"": ""` new york city '""}"
